@@ -1,0 +1,5 @@
+schema: http://localhost:3000/graphql
+generates:
+  ./schema.d.ts:
+    plugins:
+      - typescript

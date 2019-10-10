@@ -1,0 +1,28 @@
+{
+  "name": "gql-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "gentypes": "graphql-codegen"
+  },
+  "author": "Sabin Maarcu <sabinmarcu@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-codegen/cli": "^1.8.1",
+    "@graphql-codegen/typescript": "^1.8.1",
+    "@typescript-eslint/eslint-plugin": "2.3.0",
+    "altair-express-middleware": "^2.3.4",
+    "apollo-server": "^2.9.5",
+    "apollo-server-express": "^2.9.5",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-typescript": "^5.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  }
+}
