@@ -1,0 +1,72 @@
+type User {
+  id: Int!
+  name: String!
+  email: String!
+  avatar: String!
+  posts: [Post!]
+}
+
+type Post {
+  id: Int!
+  owner: User!
+  title: String!
+  cover: String!
+  content: String!
+  tags: [Tag!]
+}
+
+type Tag {
+  id: Int!
+  name: String!
+  related: [Tag!]
+  posts: [Post!]
+}
+
+union SearchType = User | Post | Tag
+
+type Query {
+  users: [User!]
+  user(where: Int!): User
+  posts: [Post!]
+  post(where: Int!): Post
+  tags: [Tag!]
+  tag(where: Int!): Tag
+  search(text: String!): [SearchType!]
+}
+
+input NewUserInput {
+  name: String!
+  email: String!
+  avatar: String
+}
+
+input NewPostDataTagsInput {
+  ids: [Int!]
+  id: Int
+}
+input NewPostDataInput {
+  title: String!
+  content: String!
+  cover: String!
+  tags: NewPostDataTagsInput
+}
+
+input UpdatePostTagsInput {
+  ADD: Int
+  SET: [Int!]
+  REMOVE: Int
+}
+
+input UpdatePostInput {
+  title: String
+  content: String,
+  cover: String,
+  tags: UpdatePostTagsInput,
+}
+
+type Mutation {
+  addUser(data: NewUserInput!): User
+  addPost(where: Int!, data: NewPostDataInput!): Post
+  updatePost(where: Int!, data: UpdatePostInput!): Post
+}
+

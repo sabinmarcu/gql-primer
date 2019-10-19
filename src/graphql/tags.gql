@@ -1,0 +1,10 @@
+query {
+  tags {
+    id
+    name
+    related {
+      id
+      name
+    }
+  }
+}

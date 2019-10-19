@@ -1,0 +1,15 @@
+query {
+  posts {
+    id
+    title
+    content
+    cover
+    tags {
+      id
+      name
+      related {
+        name
+      }
+    }
+  }
+}

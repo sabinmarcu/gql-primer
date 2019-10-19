@@ -1,0 +1,12 @@
+query GET_ALL_USERS {
+  users {
+    id
+    name
+    email
+    avatar
+    posts {
+      id
+      title
+    }
+  }
+}

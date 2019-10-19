@@ -1,0 +1,12 @@
+query post($where: Int!) {
+  post(where: $where) {
+    id
+    title
+    content
+    cover
+    tags {
+      id
+      name
+    }
+  }
+}

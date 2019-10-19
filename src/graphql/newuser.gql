@@ -1,0 +1,16 @@
+mutation newUser(
+  $name: String!
+  $email: String!
+  $avatar: String
+) {
+  addUser(data: {
+    name: $name,
+    email: $email,
+    avatar: $avatar
+  }) {
+    id
+    name
+    avatar
+    email
+  }
+}

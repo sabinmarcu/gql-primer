@@ -1,0 +1,33 @@
+query search($term: String!) {
+  search(text: $term) {
+    __typename
+    ... on User {
+      id
+      name
+      email
+      avatar
+    }
+    ... on Post {
+      id
+      title
+      content
+      cover
+      tags {
+        id
+        name
+        related {
+          id
+          name
+        }
+      }
+    }
+    ... on Tag {
+      id
+      name
+      related {
+        id
+        name
+      }
+    }
+  }
+}

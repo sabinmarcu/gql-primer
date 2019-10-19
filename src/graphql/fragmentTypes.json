@@ -1,0 +1,21 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "UNION",
+        "name": "SearchType",
+        "possibleTypes": [
+          {
+            "name": "User"
+          },
+          {
+            "name": "Post"
+          },
+          {
+            "name": "Tag"
+          }
+        ]
+      }
+    ]
+  }
+}
